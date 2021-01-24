@@ -23,11 +23,10 @@ function App() {
           <Profile />
         </Grid>
         
-        <Grid item xs style={{background: 'red'}}>
-          <Header />
-
+        <Grid item xs >
           
           <Router>
+          <Header />
             <Switch>
               <Route path="/portfolio"><Portfolio /></Route>
               <Route path="/"><Resume /></Route>             
