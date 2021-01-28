@@ -16,7 +16,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 function App() {
   return (
-    <Container className={'top-sixty'}>
+    <Container className={'mt-60'}>
       <Grid container spacing={7}>
 
         <Grid item xs={12} sm={12} md={4} lg={3} >
@@ -27,10 +27,16 @@ function App() {
           
           <Router>
           <Header />
+
+          <div className='main-content container-shadow'>
             <Switch>
               <Route path="/portfolio"><Portfolio /></Route>
               <Route path="/"><Resume /></Route>             
             </Switch>
+          </div>
+
+
+            
           </Router>
           
           <Footer />
