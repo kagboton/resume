@@ -1,4 +1,4 @@
-import { Grid, Icon, Paper, Typography } from '@material-ui/core'
+import { Grid, Icon, Paper, TextareaAutosize, TextField, Typography } from '@material-ui/core'
 import React from 'react'
 import './Resume.css'
 import data from '../../utils/resumeData'
@@ -9,6 +9,7 @@ import TimelineContent from '@material-ui/lab/TimelineContent'
 import TimelineItem from '@material-ui/lab/TimelineItem'
 import { dark } from '@material-ui/core/styles/createPalette'
 import TimelineDot from '@material-ui/lab/TimelineDot'
+import CustomButton from '../../components/button/Button'
 
 
 const Resume = () => {
@@ -101,8 +102,59 @@ const Resume = () => {
                 </Grid>
                 
             </Grid>
-            {/* Contact */}
-            <Grid container className='section'></Grid>
+
+            {/* Contact */}           
+            <Grid container className='section pt-45 pb-45' spacing={6}>
+                 {/* Contact form */}
+                <Grid item xs={12} lg={7}>
+                    <Grid container >
+                        <SectionTitle title = 'Contact Form'/>
+                        <Grid item xs={12}>
+                            <Grid container spacing={3}>
+                                <Grid item xs={12} sm={6}><TextField fullWidth name='name' label='Name' /></Grid>
+                                <Grid item xs={12} sm={6}><TextField fullWidth name='email' label='Email' /></Grid>
+                                <Grid item xs={12} ><TextField fullWidth name='message' label='Message' multiline rows={4}/></Grid>
+                                <Grid item xs={12} ><CustomButton text='Submit' /></Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                {/* Contact information */}
+                <Grid item xs={12} lg={5}>
+                    <Grid container >
+                        <SectionTitle title = 'Contact Information'/>
+                        <Grid item xs={12}>
+                            <Grid container>
+                                <Grid item xs={12}>
+                                    <Typography className='contact-info-item'>
+                                        <span>Address: </span> {data.address}
+                                    </Typography>
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <Typography className='contact-info-item'>
+                                        <span>Email: </span> {data.email}
+                                    </Typography>
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <Typography className='contact-info-item'>
+                                        <span>Skype: </span> {data.skype}
+                                    </Typography>
+                                </Grid>
+                                
+                            </Grid>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Grid container className='contact-info-socials-container' >
+                                {Object.keys(data.socials).map(key => (
+                                    <Grid item className='contact-info-social'>
+                                        <a href={data.socials[key].link}>{data.socials[key].icon}</a>
+                                    </Grid>
+                                ))}
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
         </>
        
     )

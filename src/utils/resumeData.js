@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { GitHub, Twitter, LinkedIn, WebOutlined, SettingsEthernet } from "@material-ui/icons";
+import { GitHub, Twitter, LinkedIn, WebOutlined, SettingsEthernet, YouTube, Language } from "@material-ui/icons";
 import { Icon } from '@iconify/react';
 import discordIcon from '@iconify/icons-simple-icons/discord';
 
@@ -8,6 +8,7 @@ import discordIcon from '@iconify/icons-simple-icons/discord';
 export default {
     name : 'Kilian Agboton',
     title : 'Software developer',
+    address: '756 newmarket lane, Kingston, ON',    
     about : 
         "As a software developer, I particularly like web development in Java with the Spring Boot framework and the React JS library for the design of APIs and the creation of user-friendly interfaces. With the aim of providing a continuous quality of service, my combined experiences in networking and software development can emulate a DevOps approach, allowing me to generate continuous integration of the production pipeline. \n\n I am open to others and use my passion and my critical mind to motivate and help people through my experiences. I am passionate about sport and I want to Discover and Share new innovative stuffs.",
     email : 'kilian.agboton@gmail.com',
@@ -125,6 +126,62 @@ export default {
                 "Docker",
                 "Kubernates",
             ]
+        },
+    ],
+
+    projects : [
+        {
+            tag: 'React',
+            image: 'https://www.wallpapers13.com/wp-content/uploads/2016/02/Background-lake-sky-reflecting-hd-wallpaper-15903-915x515.jpg',
+            title: 'Project 1',
+            description: 'This project decription',
+            caption: 'A short description',
+            links : [
+                { link:'https://google.com', icon: <YouTube /> },
+                { link:'https://google.com', icon: <GitHub /> },
+                { link:'https://google.com', icon: <Language /> },
+            ]
+
+        },
+        {
+            tag: 'Java',
+            image: 'https://www.wallpapers13.com/wp-content/uploads/2016/02/Background-lake-sky-reflecting-hd-wallpaper-15903-915x515.jpg',
+            title: 'Java Project 1',
+            description: 'This project decription',
+            caption: 'A short description',
+            links : [
+                { link:'https://google.com', icon: <YouTube /> },
+                { link:'https://google.com', icon: <GitHub /> },
+                { link:'https://google.com', icon: <Language /> },
+            ]
+
+        },
+        {
+            tag: 'Java',
+            image: 'https://www.wallpapers13.com/wp-content/uploads/2016/02/Background-lake-sky-reflecting-hd-wallpaper-15903-915x515.jpg',
+            title: 'Java Project 2',
+            description: 'This project decription',
+            caption: 'A short description',
+            links : [
+                { link:'https://google.com', icon: <YouTube /> },
+                { link:'https://google.com', icon: <GitHub /> },
+                { link:'https://google.com', icon: <Language /> },
+            ]
+
+        },
+
+        {
+            tag: 'Phyton',
+            image: 'https://www.wallpapers13.com/wp-content/uploads/2016/02/Background-lake-sky-reflecting-hd-wallpaper-15903-915x515.jpg',
+            title: 'Python Project 1',
+            description: 'This project decription',
+            caption: 'A short description',
+            links : [
+                { link:'https://google.com', icon: <YouTube /> },
+                { link:'https://google.com', icon: <GitHub /> },
+                { link:'https://google.com', icon: <Language /> },
+            ]
+
         },
     ]
 

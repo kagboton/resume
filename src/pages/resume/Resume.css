@@ -90,3 +90,41 @@
 }
 
 /* End of Skills section */
+
+/* Contact section */
+
+.contact-info-item{
+    font-size: 14px !important;
+    color: #787878;
+    line-height: 34px !important;
+
+}
+
+.contact-info-item > span{
+    color: black;
+    font-weight: 500;
+    
+}
+
+.contact-info-socials-container{
+    margin-top: 25px;
+
+}
+
+
+.contact-info-social > a {
+    font-size: 16px !important;
+    margin-left:  10px;
+    color: black;
+}
+
+.contact-info-social > a > .MuiSvgIcon-root{
+    font-size: 16px !important;
+    color: black;
+}
+
+
+
+
+
+/* End of Contact section */
