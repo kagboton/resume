@@ -31,7 +31,7 @@ const Header = (props) => {
                         <a href={data.socials[key].link} target='_blank'> {data.socials[key].icon}</a>
                     ))}
 
-                    <CustomButton text={'Hire me'} icon={<Telegram/>} />
+                    <CustomButton url={'mailto:covid19api.org@gmail.com?subject=[COVID-19 API]:'} text={'Hire me'} icon={<Telegram/>} />
                 </div>
 
                 

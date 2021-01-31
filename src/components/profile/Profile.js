@@ -5,6 +5,7 @@ import profileImage from '../../assets/images/displayImage.jpg';
 import CustomTimeline, {CustomTimelineSeparator} from '../timeline/Timeline';
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined'
 import data from '../../utils/resumeData';
+import resume from '../../assets/files/Agboton _Kilian_Resume.pdf'
 
 import './Profile.css';
 import TimelineContent from '@material-ui/lab/TimelineContent';
@@ -39,7 +40,10 @@ const Profile = () => {
                 </CustomTimeline>
                 
                 <div className='btn-container'>
-                    <CustomButton text='Download CV' icon={<GetApp />}/>
+                    <a href={resume} target="_blank">
+                        <CustomButton text='Download CV' icon={<GetApp />}/>
+                    </a>
+                    
                 </div>   
                 
             </div>

@@ -2,57 +2,59 @@ import React from 'react';
 
 import { GitHub, Twitter, LinkedIn, WebOutlined, SettingsEthernet, YouTube, Language } from "@material-ui/icons";
 import { Icon } from '@iconify/react';
-import discordIcon from '@iconify/icons-simple-icons/discord';
-
+//import discordIcon from '@iconify/icons-simple-icons/discord';
+import amazonAws from '@iconify/icons-cib/amazon-aws';
+import codeIcon from '@iconify/icons-bi/code';
 
 export default {
     name : 'Kilian Agboton',
     title : 'Software developer',
     address: '756 newmarket lane, Kingston, ON',    
     about : 
-        "As a software developer, I particularly like web development in Java with the Spring Boot framework and the React JS library for the design of APIs and the creation of user-friendly interfaces. With the aim of providing a continuous quality of service, my combined experiences in networking and software development can emulate a DevOps approach, allowing me to generate continuous integration of the production pipeline. \n\n I am open to others and use my passion and my critical mind to motivate and help people through my experiences. I am passionate about sport and I want to Discover and Share new innovative stuffs.",
+        "Hi, my name is Kilian and I'm a software developer. \n\n As a developer, I particularly like web development in Java with the Spring framework and the React JS library for the design of APIs and the creation of user-friendly interfaces. With the aim of providing a continuous quality of service, my combined experiences in networking and software development can emulate a DevOps approach, allowing me to generate continuous integration of the production pipeline. \n\n I am open to others and use my passion and my critical mind to motivate and help people through my experiences. I am passionate about sport and I want to Discover and Share new innovative stuffs.",
     email : 'kilian.agboton@gmail.com',
     skype: 'agbotonstefane',
 
     socials : {
+        LinkedIn: {
+            link: 'https://www.linkedin.com/in/kilian-agboton/',
+            text: 'LinkedIn',
+            icon: <LinkedIn />
+        },        
         Twitter: {
-            link: '#',
+            link: 'https://twitter.com/kiliango',
             text: 'Twiter',
             icon: <Twitter />
         },
-        Discord: {
-            link: '#',
-            text: 'Kilian#9753',
-            icon: <Icon icon={discordIcon} />
-        } ,      
+        // Discord: {
+        //     link: '#',
+        //     text: 'Kilian#9753',
+        //     icon: <Icon icon={discordIcon} />
+        // } ,      
         Github:{
             link: 'https://github.com/kagboton',
             text: 'kagboton',
             icon: <GitHub />
         }, 
-        LinkedIn: {
-            link: 'https://www.linkedin.com/in/kilian-agboton/',
-            text: 'LinkedIn',
-            icon: <LinkedIn />
-        }
+       
         
     },
 
     experiences : [
         {
             title : "Web developer",
-            date : "Jan 2020 - Present",
+            date : "Jan 2020 - Present, Website Design Kingston (Canada)",
             description : "Design and create website from scratch or by using a content management system (Joomla, WordPress). Assist the customers for the maintenance and troubleshooting of their websites."
         },
         {
             title : "Software Development Engineer",
-            date : "Aug 2018 - Sep 2019",
+            date : "Aug 2018 - Sep 2019, Alstef Automation (France)",
             description : "Assisted the project manager, and contributed to the study and implementation of the company electronic document management (EDM) system with Autodesk VAULT."
         },
         {
-            title : "Data Steward",
-            date : "Nov 2017 - Feb 2018",
-            description : "Worked on compliance and migration of essential customer data from the local database to the remote CX Platform, researching techniques for the use of database tools."
+            title : "Web developer",
+            date : "Apr 2016 - Jul 2016, Group Renault (France)",
+            description : "Designed and developed a database and a web application for the management of HMI data from vehicles."
         },
 
     ], 
@@ -62,6 +64,11 @@ export default {
             title : "Master’s Degree of Science in Business Informatics",
             date : "August 2019",
             description : "Université d’Orléans, Orléans (France)"
+        },
+        {
+            title : "Bachelor Degree of Science in Business Informatics",
+            date : "August 2016",
+            description : "Université d’Orléans, Orléans (France)"
         }
     ], 
 
@@ -69,18 +76,18 @@ export default {
         
         {
             title : 'Backend Development',
-            description : 'With, Java, Spring, etc. (parler de la certification spring)',
-            icon : <WebOutlined />
+            description : "Experience creating RESTful APIs - Knowledge in microservices",
+            icon : <Icon icon={codeIcon} />
         },
         {
             title: 'Web Development',
-            description: 'Parler de React JS, de wordpress etc. ',
+            description: 'Knowledge in ReactJS frontend library',
             icon : <WebOutlined />
         },
         {
             title: 'Application Deployment',
-            description: 'Parler de AWS certification et montrer me competence',
-            icon : <SettingsEthernet />
+            description: 'Experience with Linux/Unix - Preparing AWS Certified Developer - Associate',
+            icon : <Icon icon={amazonAws} />
         },
     ],
 
@@ -88,7 +95,7 @@ export default {
         {
             title : 'BACK-END', 
             description : [
-                "Java",
+                "Java 8+",
                 "Spring Framework",
                 "Hibernate", 
                 "Microservices"
@@ -97,10 +104,10 @@ export default {
         {
             title : 'FRONT-END', 
             description : [
-                "Javascript",
                 "React JS",
-                "Bootstrap",
-                "Material UI"
+                "Material UI",
+                "Bootstrap",                
+                "Wordpress/Joomla"
             ]
         },
         {
@@ -121,10 +128,11 @@ export default {
             ]
         },
         {
-            title : 'INFRASTRUCTURE', 
+            title : 'DEPLOIEMENT', 
             description : [
                 "Docker",
                 "Kubernates",
+                "Gitlab CI"
             ]
         },
     ],
@@ -132,57 +140,39 @@ export default {
     projects : [
         {
             tag: 'React',
-            image: 'https://www.wallpapers13.com/wp-content/uploads/2016/02/Background-lake-sky-reflecting-hd-wallpaper-15903-915x515.jpg',
-            title: 'Project 1',
-            description: 'This project decription',
-            caption: 'A short description',
+            image: 'https://image.freepik.com/free-vector/code-typing-concept-illustration_114360-3866.jpg',
+            title: 'Kilian Agboton Resume Website',
+            description: "This project goal is to create my resume website using ReactJS library. It's a clone idea from a Wordpress template made by tavonline. This project allows me to practice React JS. More projects coming ... ",
+            caption: 'React website',
             links : [
-                { link:'https://google.com', icon: <YouTube /> },
-                { link:'https://google.com', icon: <GitHub /> },
-                { link:'https://google.com', icon: <Language /> },
+                { link:'https://github.com/kagboton/resume', icon: <GitHub /> },
             ]
 
         },
         {
             tag: 'Java',
-            image: 'https://www.wallpapers13.com/wp-content/uploads/2016/02/Background-lake-sky-reflecting-hd-wallpaper-15903-915x515.jpg',
-            title: 'Java Project 1',
-            description: 'This project decription',
-            caption: 'A short description',
-            links : [
-                { link:'https://google.com', icon: <YouTube /> },
-                { link:'https://google.com', icon: <GitHub /> },
-                { link:'https://google.com', icon: <Language /> },
+            image: 'https://image.freepik.com/free-vector/api-application-program-interface_9233-249.jpg',
+            title: 'Covid-19 API',
+            description: 'This is a Restful API that provides Covid-19 statistics of countries all over the world. I collected the COVID-19 data from various sources, normalize them, and then provide it all as an easy to use API. This project was created with the spring framework and deployed using a micro-services architecture.',
+            caption: 'My personal Restful API',
+            links : [                
+                { link:'https://github.com/kagboton/covid-19', icon: <GitHub /> },
             ]
 
         },
         {
             tag: 'Java',
-            image: 'https://www.wallpapers13.com/wp-content/uploads/2016/02/Background-lake-sky-reflecting-hd-wallpaper-15903-915x515.jpg',
-            title: 'Java Project 2',
-            description: 'This project decription',
-            caption: 'A short description',
+            image: "https://image.freepik.com/free-vector/people-holding-connected-copy-space-circle-icons_53876-64681.jpg",
+            title: 'Event Planner',
+            description: 'The goal of this project is to design an event organization system in a social network, deployed using a micro-services architecture. The application allows a set of users, registered on the network, to participate in a party proposed by another user.',
+            caption: 'A social network web application',
             links : [
-                { link:'https://google.com', icon: <YouTube /> },
-                { link:'https://google.com', icon: <GitHub /> },
-                { link:'https://google.com', icon: <Language /> },
+                
+                { link:'https://github.com/kagboton/groupeG', icon: <GitHub /> },
             ]
 
         },
-
-        {
-            tag: 'Phyton',
-            image: 'https://www.wallpapers13.com/wp-content/uploads/2016/02/Background-lake-sky-reflecting-hd-wallpaper-15903-915x515.jpg',
-            title: 'Python Project 1',
-            description: 'This project decription',
-            caption: 'A short description',
-            links : [
-                { link:'https://google.com', icon: <YouTube /> },
-                { link:'https://google.com', icon: <GitHub /> },
-                { link:'https://google.com', icon: <Language /> },
-            ]
-
-        },
+        
     ]
 
           
