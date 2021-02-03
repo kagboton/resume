@@ -7,14 +7,43 @@ import CustomTimeline, {CustomTimelineSeparator} from '../../components/timeline
 import { School, Work } from '@material-ui/icons'
 import TimelineContent from '@material-ui/lab/TimelineContent'
 import TimelineItem from '@material-ui/lab/TimelineItem'
-import { dark } from '@material-ui/core/styles/createPalette'
 import TimelineDot from '@material-ui/lab/TimelineDot'
 import CustomButton from '../../components/button/Button'
+import emailjs from 'emailjs-com';
+import { Alert } from '@material-ui/lab'
+
+import IconButton from '@material-ui/core/IconButton';
+import Collapse from '@material-ui/core/Collapse';
+import CloseIcon from '@material-ui/icons/Close';
 
 
 const Resume = () => {
+
+    const [open, setOpen] = React.useState(false);
+    const [message, setMessage] = React.useState("");
+    const [alertSeverity, setAlertSeverity] = React.useState("");
+
+    function sendEmail(e) {
+        e.preventDefault();
+    
+        emailjs.sendForm("service_5np9hgw", 'template_ow5iqej', e.target, "user_Z1KQ0PTCfdcv3lisOYtwl")
+          .then((result) => { 
+            setAlertSeverity("success")
+            setMessage("Message successfully submitted")   
+            setOpen(true);
+          }, (error) => {
+            setAlertSeverity("error")
+            setMessage("There is an error processing the form") 
+            setOpen(true);
+          });
+
+          e.target.reset()
+      }
+    
+
     return (
         <>
+        
             {/* About me */}
             <Grid container className='section pb-45 pt-45'>
                 <SectionTitle title = 'About me'/>
@@ -104,21 +133,48 @@ const Resume = () => {
             </Grid>
 
             {/* Contact */}           
-            <Grid container className='section pt-45 pb-45' spacing={6}>
-                 {/* Contact form */}
+            <Grid container className='section pb-45' spacing={6}>  
+                {/* Alert component */}
                 <Grid item xs={12} lg={7}>
-                    <Grid container >
-                        <SectionTitle title = 'Contact Form'/>
-                        <Grid item xs={12}>
-                            <Grid container spacing={3}>
-                                <Grid item xs={12} sm={6}><TextField fullWidth name='name' label='Name' /></Grid>
-                                <Grid item xs={12} sm={6}><TextField fullWidth name='email' label='Email' /></Grid>
-                                <Grid item xs={12} ><TextField fullWidth name='message' label='Message' multiline rows={4}/></Grid>
-                                <Grid item xs={12} ><CustomButton text='Submit' /></Grid>
-                            </Grid>
-                        </Grid>
-                    </Grid>
+                    <Collapse in={open}>
+                        <Alert
+                            severity = {alertSeverity}
+                            action={
+                                <IconButton
+                                    aria-label="close"
+                                    color="inherit"
+                                    size="small"
+                                    onClick={() => {
+                                        setOpen(false);
+                                    }}
+                                >
+                                    <CloseIcon fontSize="inherit" />
+                                </IconButton>
+                            }
+                        >
+                        {message}
+                        </Alert>
+                    </Collapse>
                 </Grid>
+               
+                {/* Contact form */}
+                <Grid item xs={12} lg={7}>
+                
+                    <Grid container >
+                        <SectionTitle title = 'Contact Form'/>                                
+                    </Grid>
+
+                    <form className="contact-form" onSubmit={sendEmail} xs={12}> 
+                        <Grid container spacing={3}>
+                            <Grid item xs={12} sm={6}><TextField fullWidth required type='text' name='name' label='Name' /></Grid>    
+                            <Grid item xs={12} sm={6}><TextField fullWidth required type='email' name='email' label='Email' /></Grid>
+                            <Grid item xs={12} ><TextField fullWidth required type='text' name='message' label='Message' multiline rows={4}/></Grid>
+                            <Grid item xs={12} ><CustomButton buttonType='submit' text='Submit' onclik={sendEmail} /></Grid>                            
+                        </Grid>
+                        
+                    </form>
+                </Grid>
+
                 {/* Contact information */}
                 <Grid item xs={12} lg={5}>
                     <Grid container >
@@ -155,6 +211,9 @@ const Resume = () => {
                     </Grid>
                 </Grid>
             </Grid>
+       
+            
+       
         </>
        
     )
