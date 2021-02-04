@@ -1,8 +1,8 @@
 import React from 'react'
-import { Button, Form, FormControl, Nav, Navbar, NavDropdown} from "react-bootstrap";
+import { Nav, Navbar} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css"
 import { withRouter } from "react-router";
-import { Home, HomeRounded, Telegram } from '@material-ui/icons';
+import {  HomeRounded, Telegram } from '@material-ui/icons';
 import { NavLink } from 'react-router-dom';
 
 import data from '../../utils/resumeData';
@@ -21,14 +21,14 @@ const Header = (props) => {
             <Navbar.Collapse>
                 <Nav className='header-left'>
                     {/* Resume link */}
-                    <Nav.Link as={NavLink} to ='/' className={pathName == '/' ? 'header-link-active' : 'header-link'}>Resume</Nav.Link>
+                    <Nav.Link as={NavLink} to ='/' className={pathName === '/' ? 'header-link-active' : 'header-link'}>Resume</Nav.Link>
                     {/* Portfolio link */}
-                    <Nav.Link as={NavLink} to ='/portfolio' className={pathName == '/portfolio' ? 'header-link-active' : 'header-link'}>Portfolio</Nav.Link>
+                    <Nav.Link as={NavLink} to ='/portfolio' className={pathName === '/portfolio' ? 'header-link-active' : 'header-link'}>Portfolio</Nav.Link>
                 </Nav>
 
                 <div className='header-right'>
                     {Object.keys(data.socials).map(key => (
-                        <a href={data.socials[key].link} target='_blank'> {data.socials[key].icon}</a>
+                        <a href={data.socials[key].link} target='_blank' rel="noreferrer"> {data.socials[key].icon}</a>
                     ))}
 
                     <CustomButton url={'mailto:kilian.agboton@gmail.com?subject=[YOUR RESUME]:'} text={'Hire me'} icon={<Telegram/>} />

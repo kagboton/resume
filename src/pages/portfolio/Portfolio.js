@@ -17,10 +17,10 @@ const Portfolio = () => {
              {/* Tabs */}
             <Grid item xs={12}>
                 <Tabs value={tabValue} indicatorColor='white' className='custom-tabs' onChange={(event, newValue) => setTabValue((newValue))}>
-                    <Tab label='All' value='All' className={tabValue == 'All' ? 'custom-tabs-item active' : 'custom-tabs-item'} />
+                    <Tab label='All' value='All' className={tabValue === 'All' ? 'custom-tabs-item active' : 'custom-tabs-item'} />
                                         
                     {[...new Set(data.projects.map(item => item.tag))].map(tag =>(
-                        <Tab label={tag} value={tag} className={tabValue == tag ? 'custom-tabs-item active' : 'custom-tabs-item'}/>
+                        <Tab label={tag} value={tag} className={tabValue === tag ? 'custom-tabs-item active' : 'custom-tabs-item'}/>
                     )) }
                     
                 </Tabs>
@@ -61,7 +61,7 @@ const Portfolio = () => {
                 </DialogContent>
                 <DialogActions className='project-dialog-actions' >
                     {projectDialog?.links?.map(link => (
-                        <a href={link.link} target='_blank' className='project-dialog-icon'>{link.icon}</a>
+                        <a href={link.link} rel="noreferrer" target='_blank' className='project-dialog-icon'>{link.icon}</a>
                     ))}
                 </DialogActions>
             </Dialog>

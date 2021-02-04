@@ -40,7 +40,7 @@ const Profile = () => {
                 </CustomTimeline>
                 
                 <div className='btn-container'>
-                    <a href={resume} target="_blank">
+                    <a href={resume} rel="noreferrer" target="_blank">
                         <CustomButton text='Download CV' icon={<GetApp />}/>
                     </a>
                     
@@ -56,7 +56,7 @@ const CustomTimelineItem = ({title, text, link}) => (
         <TimelineContent className='timeline-content'>
             
             {link ? (
-                <Typography className='timeline-item-text'><span>{title}</span>: <a href={link} target='_blank'>{text}</a></Typography>
+                <Typography className='timeline-item-text'><span>{title}</span>: <a href={link} rel="noreferrer" target='_blank'>{text}</a></Typography>
                 ) : (
                 <Typography className='timeline-item-text'><span>{title}:</span> {text}</Typography>
             )}

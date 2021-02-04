@@ -1,4 +1,4 @@
-import { Grid, Icon, Paper, TextareaAutosize, TextField, Typography } from '@material-ui/core'
+import { Grid, Icon, Paper, TextField, Typography } from '@material-ui/core'
 import React from 'react'
 import './Resume.css'
 import data from '../../utils/resumeData'

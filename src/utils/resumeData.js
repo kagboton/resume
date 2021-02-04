@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { GitHub, Twitter, LinkedIn, WebOutlined, SettingsEthernet, YouTube, Language } from "@material-ui/icons";
+import { GitHub, Twitter, LinkedIn, WebOutlined } from "@material-ui/icons";
 import { Icon } from '@iconify/react';
 //import discordIcon from '@iconify/icons-simple-icons/discord';
 import amazonAws from '@iconify/icons-cib/amazon-aws';

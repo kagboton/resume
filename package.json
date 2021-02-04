@@ -2,7 +2,7 @@
   "name": "resume",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://resume.kilian-agboton.com/",
+  "homepage": "https://kilian-agboton.com/",
   "dependencies": {
     "@iconify/icons-bi": "^1.1.0",
     "@iconify/icons-cib": "^1.1.0",

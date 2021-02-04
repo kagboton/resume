@@ -12,9 +12,9 @@ const Footer = () => {
             </div>
             <div className='footer-right'>
                 <Typography className='footer-copyright'>
-                    Designed and Developed by <a href='#'>Kilian Agboton</a>
+                    Designed and Developed by <a href='https://github.com/kagboton' rel="noreferrer" target='_blank'>Kilian Agboton</a>
                     <br />
-                    Clone idea from <a href='https://themeforest.net/user/tavonline' target='_blank'>tavonline</a>.
+                    Clone idea from <a href='https://themeforest.net/user/tavonline' rel="noreferrer" target='_blank'>tavonline</a>.
                 </Typography>
             </div>
         </div>
